@@ -28,7 +28,7 @@ $(document).ready(function(){
       }
       $("#show-temperature").text(tempOutput);
       $("#show-temperature-unit").text(unitType);
-      initMap(response.coord.lat, response.coord.lon);
+      initMap(response.coord.lat, response.coord.lon, "temperature-map");
       console.log(response);
       console.log(response);
     }).fail(function(error){
