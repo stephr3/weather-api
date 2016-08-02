@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <meta charset="utf-8">
@@ -10,14 +10,26 @@
   </head>
   <body>
     <div class="container">
-      <form id="get-humidity">
-        <label for="city">City</label>
+      <form>
+        <label for="city">City Humidity:</label>
         <input type="text" id="city">
-        <button type="submit">Submit</button>
+        <button id="get-humidity">Submit</button>
+      </form>
+      <form>
+        <label for="city-temperature">City Temperature:</label>
+        <input type="text" id="city-temperature">
+        <select id="temperature-unit">
+          <option>Fahrenheit</option>
+          <option>Celsius</option>
+          <option>Kelvin</option>
+        </select>
+        <button id="get-temperature">Submit</button>
       </form>
       <div>
         <h3>The humidity in <span id="show-city"></span> is <span id="show-humidity"></span></h3>
+        <h3>The temperature in <span id="show-city-temperature"></span> is <span id="show-temperature"></span> degrees <span id="show-temperature-unit"></span></h3>
       </div>
+      <p id="error-message"></p>
     </div>
   </body>
 </html>
